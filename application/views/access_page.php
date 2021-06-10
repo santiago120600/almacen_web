@@ -40,22 +40,32 @@
               <div class="text-center text-muted mb-4">
                 <small>Entrar usandos tus credenciales</small>
               </div>
-              <form role="form">
+              <?php if(@$this->session->flashdata('errores_msg')){ ?>
+                    <div class="alert alert-danger alert-dismissible fade show">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h3><?=$this->session->flashdata('errores_msg');?></h3>
+                    </div>
+               <?php } ?>  
+              <?=form_open('access/doLogin');?>
                 <div class="form-group mb-3">
                   <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Email" type="email">
+                    <input class="form-control" placeholder="Email" type="email" name="pEmail">
                   </div>
+                  <small class="text-help text-danger"><?=@$this->session->flashdata('errores')['pEmail'];?></small>
                 </div>
                 <div class="form-group">
                   <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Password" type="password">
+                    <input class="form-control" placeholder="Password" type="password" name="pPassword">
                   </div>
+                  <small class="text-help text-danger"><?=@$this->session->flashdata('errores')['pPassword'];?></small>
                 </div>
                 <div class="custom-control custom-control-alternative custom-checkbox">
                   <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
@@ -64,9 +74,9 @@
                   </label>
                 </div>
                 <div class="text-center">
-                  <button type="button" class="btn btn-primary my-4">Entrar</button>
+                  <button type="submit" class="btn btn-primary my-4">Entrar</button>
                 </div>
-              </form>
+              <?=form_close();?>  
             </div>
           </div>
           <div class="row mt-3">

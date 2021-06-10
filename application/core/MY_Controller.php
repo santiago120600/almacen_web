@@ -37,7 +37,7 @@ class MY_RootController extends CI_Controller {
 			$this->load->view($view_name,$params);
 
 		}
-    public function _callApiRest($endPoint, $data = NULL, $method) {
+    public function _callApiRest($endPoint, $method, $data = NULL) {
 	    $response = array();
         switch ($method){
             case "POST":

@@ -91,11 +91,10 @@ $config['global_xss_filtering'] = FALSE;
 
 
 $config['csrf_protection'] = TRUE;
-$config['csrf_token_name'] = 'criq_csrf';
-$config['csrf_cookie_name'] = 'criq_csrf_cookie';
+$config['csrf_token_name'] = 'almacen_csrf';
+$config['csrf_cookie_name'] = 'almacen_csrf_cookie';
 $config['csrf_expire'] = 7200;
 $config['csrf_regenerate'] = TRUE;
-$config['csrf_exclude_uris'] = array('cash_register/*');
 
 
 $config['compress_output'] = FALSE;

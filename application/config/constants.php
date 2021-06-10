@@ -86,5 +86,5 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 
 
 $api_url_text = (isset($_SERVER['HTTPS']) ? "https://" : "http://").$_SERVER['HTTP_HOST'];
-define('api_url', $api_url_text.'/almacen_services_sw14/');
+define('api_url', $api_url_text.'/almacen_services_sw14/index.php/');
 define('api_key', 'kEy$sw14Almacen');

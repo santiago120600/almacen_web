@@ -24,7 +24,11 @@
       </div>
       <ul class="navbar-nav">
         <li class="nav-item <?=@$selected == 'Home' ? 'active' : ''; ?>">
-        <a class=" nav-link " href="javascript:;"> <i class="ni ni-tv-2 text-primary"></i> Home
+        <a class=" nav-link " href="<?=site_url('home');?>"> <i class="ni ni-tv-2 text-primary"></i> Home
+          </a>
+        </li>
+        <li class="nav-item <?=@$selected == 'Users' ? 'active' : ''; ?>">
+        <a class=" nav-link " href="<?=site_url('users');?>"> <i class="fas fa-users text-primary"></i> Usuarios
           </a>
         </li>
       </ul>

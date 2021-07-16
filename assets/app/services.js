@@ -58,9 +58,9 @@ $.fn.uploadFiles = function(_endPoint,data,_containerData){
       contentType: false,
       cache: false,
       processData:false,
-      /*headers: {
+      headers: {
           'ALMACEN-API-KEY':'kEy$sw14Almacen'
-      },*/
+      },
   });
 }
 

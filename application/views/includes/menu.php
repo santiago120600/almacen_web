@@ -31,6 +31,11 @@
         <a class=" nav-link " href="<?=site_url('users');?>"> <i class="fas fa-users text-primary"></i> Usuarios
           </a>
         </li>
+        </li>
+        <li class="nav-item <?=@$selected == 'Materials' ? 'active' : ''; ?>">
+        <a class=" nav-link " href="<?=site_url('Materials');?>"> <i class="fas fa-toolbox text-primary"></i>Materials
+          </a>
+        </li>
       </ul>
     </div>
   </div>
